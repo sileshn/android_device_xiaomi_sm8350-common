@@ -233,6 +233,10 @@ on post-fs-data
     chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/backlight/panel0-backlight/max_brightness
     chmod 0660 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/backlight/panel0-backlight/max_brightness
 
+    # Allow systemto modify High Touch Sampling Rate
+    chown system system /sys/devices/virtual/touch/touch_dev/bump_sample_rate
+    chmod 0660 /sys/devices/virtual/touch/touch_dev/bump_sample_rate
+
 on property:sys.boot_completed=1
     setprop vendor.post_boot.parsed 1
     # Enable UFS clock scaling back
