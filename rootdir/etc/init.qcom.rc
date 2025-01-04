@@ -220,6 +220,18 @@ on post-fs-data
     mkdir /data/vendor/vpp 0770 media media
 
     setprop vold.post_fs_data_done 1
+    
+    # Allow system to modify exposure dim layer state
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure
+    # Allow system to modify hbm state
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm
+    # Allow system to modify brightness
+    chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/backlight/panel0-backlight/brightness
+    chmod 0660 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/backlight/panel0-backlight/brightness
+    chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/backlight/panel0-backlight/max_brightness
+    chmod 0660 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/backlight/panel0-backlight/max_brightness
 
 on property:sys.boot_completed=1
     setprop vendor.post_boot.parsed 1
