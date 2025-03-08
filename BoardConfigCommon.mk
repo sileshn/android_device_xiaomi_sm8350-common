@@ -9,8 +9,6 @@ COMMON_PATH := device/xiaomi/sm8350-common
 BOARD_VENDOR := xiaomi
 
 # A/B
-AB_OTA_UPDATER := true
-
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
