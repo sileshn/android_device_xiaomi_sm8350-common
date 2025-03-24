@@ -494,3 +494,6 @@ PRODUCT_COPY_FILES += \
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
     firmware_WCNSS_qcom_cfg.ini_symlink
+
+# ZramWriteback
+-include hardware/google/pixel/mm/device_gki.mk
