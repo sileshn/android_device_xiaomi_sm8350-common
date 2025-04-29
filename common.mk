@@ -248,6 +248,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_ENABLE_UFFD_GC := true
 
 # Lineage Health
+$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
+
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
