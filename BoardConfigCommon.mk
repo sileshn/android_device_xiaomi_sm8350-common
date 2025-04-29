@@ -140,9 +140,6 @@ TARGET_BOARD_PLATFORM := lahaina
 # Power
 TARGET_POWER_LIBPERFMGR_MODE_EXTENSION_LIB := //$(COMMON_PATH):libperfmgr-ext-xiaomi
 
-# PowerShare
-TARGET_POWERSHARE_PATH := /sys/class/qcom-battery/reverse_chg_mode
-
 # Properties
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
